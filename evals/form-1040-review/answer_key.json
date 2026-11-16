@@ -1,0 +1,438 @@
+{
+  "skill": "form-1040-review",
+  "checks": [
+    {
+      "id": "1a",
+      "case": 1,
+      "check": "SALT cap that applies to this return.",
+      "type": "number",
+      "expected": 23900.0,
+      "tolerance": 1.0
+    },
+    {
+      "id": "1b",
+      "case": 1,
+      "check": "Correct SALT deduction.",
+      "type": "number",
+      "expected": 23900.0,
+      "tolerance": 1.0
+    },
+    {
+      "id": "1c",
+      "case": 1,
+      "check": "Amount by which the return overstates the deduction.",
+      "type": "number",
+      "expected": 16500.0,
+      "tolerance": 1.0
+    },
+    {
+      "id": "1d",
+      "case": 1,
+      "check": "Severity of this finding.",
+      "type": "choice",
+      "expected": "Error"
+    },
+    {
+      "id": "2a",
+      "case": 2,
+      "check": "Correct SALT deduction.",
+      "type": "number",
+      "expected": 10000.0,
+      "tolerance": 1.0
+    },
+    {
+      "id": "3a",
+      "case": 3,
+      "check": "Correct SALT deduction.",
+      "type": "number",
+      "expected": 26500.0,
+      "tolerance": 1.0
+    },
+    {
+      "id": "4a",
+      "case": 4,
+      "check": "Deductible charitable contributions if itemizing.",
+      "type": "number",
+      "expected": 5000.0,
+      "tolerance": 1.0
+    },
+    {
+      "id": "4b",
+      "case": 4,
+      "check": "Deductible medical expenses if itemizing.",
+      "type": "number",
+      "expected": 3000.0,
+      "tolerance": 1.0
+    },
+    {
+      "id": "4c",
+      "case": 4,
+      "check": "Total itemized deductions.",
+      "type": "number",
+      "expected": 34000.0,
+      "tolerance": 1.0
+    },
+    {
+      "id": "4d",
+      "case": 4,
+      "check": "Should the return itemize?",
+      "type": "choice",
+      "expected": "no"
+    },
+    {
+      "id": "4e",
+      "case": 4,
+      "check": "Additional deduction available compared with the return as prepared.",
+      "type": "number",
+      "expected": 2000.0,
+      "tolerance": 1.0
+    },
+    {
+      "id": "5a",
+      "case": 5,
+      "check": "Required annual payment to avoid the underpayment penalty.",
+      "type": "number",
+      "expected": 21000.0,
+      "tolerance": 1.0
+    },
+    {
+      "id": "5b",
+      "case": 5,
+      "check": "Is the safe harbor met?",
+      "type": "choice",
+      "expected": "yes"
+    },
+    {
+      "id": "6a",
+      "case": 6,
+      "check": "Required annual payment to avoid the underpayment penalty.",
+      "type": "number",
+      "expected": 66000.0,
+      "tolerance": 1.0
+    },
+    {
+      "id": "6b",
+      "case": 6,
+      "check": "Is the safe harbor met?",
+      "type": "choice",
+      "expected": "no"
+    },
+    {
+      "id": "6c",
+      "case": 6,
+      "check": "Shortfall against the required annual payment.",
+      "type": "number",
+      "expected": 2000.0,
+      "tolerance": 1.0
+    },
+    {
+      "id": "7a",
+      "case": 7,
+      "check": "Balance due with the return.",
+      "type": "number",
+      "expected": 700.0,
+      "tolerance": 1.0
+    },
+    {
+      "id": "7b",
+      "case": 7,
+      "check": "Does an underpayment penalty apply?",
+      "type": "choice",
+      "expected": "no"
+    },
+    {
+      "id": "8a",
+      "case": 8,
+      "check": "Correct net investment income tax.",
+      "type": "number",
+      "expected": 3040.0,
+      "tolerance": 0.5
+    },
+    {
+      "id": "8b",
+      "case": 8,
+      "check": "Amount by which the return overstates the tax.",
+      "type": "number",
+      "expected": 570.0,
+      "tolerance": 0.5
+    },
+    {
+      "id": "9a",
+      "case": 9,
+      "check": "Total Additional Medicare Tax for the year.",
+      "type": "number",
+      "expected": 630.0,
+      "tolerance": 0.5
+    },
+    {
+      "id": "9b",
+      "case": 9,
+      "check": "Additional Medicare Tax still owed with the return after the employer's withholding.",
+      "type": "number",
+      "expected": 270.0,
+      "tolerance": 0.5
+    },
+    {
+      "id": "9c",
+      "case": 9,
+      "check": "Is Form 8959 required?",
+      "type": "choice",
+      "expected": "yes"
+    },
+    {
+      "id": "10a",
+      "case": 10,
+      "check": "Capital loss deductible against ordinary income this year.",
+      "type": "number",
+      "expected": 3000.0,
+      "tolerance": 1.0
+    },
+    {
+      "id": "10b",
+      "case": 10,
+      "check": "Capital loss carryover to next year.",
+      "type": "number",
+      "expected": 11500.0,
+      "tolerance": 1.0
+    },
+    {
+      "id": "10c",
+      "case": 10,
+      "check": "Amount by which the return overstates the deduction.",
+      "type": "number",
+      "expected": 11500.0,
+      "tolerance": 1.0
+    },
+    {
+      "id": "11a",
+      "case": 11,
+      "check": "Does she qualify for head of household status?",
+      "type": "choice",
+      "expected": "no"
+    },
+    {
+      "id": "11b",
+      "case": 11,
+      "check": "Correct filing status.",
+      "type": "choice",
+      "expected": "single"
+    },
+    {
+      "id": "12a",
+      "case": 12,
+      "check": "Correct wages for line 1a.",
+      "type": "number",
+      "expected": 87550.0,
+      "tolerance": 1.0
+    },
+    {
+      "id": "12b",
+      "case": 12,
+      "check": "Wages left off the return.",
+      "type": "number",
+      "expected": 7900.0,
+      "tolerance": 1.0
+    },
+    {
+      "id": "12c",
+      "case": 12,
+      "check": "Correct federal withholding from Forms W-2.",
+      "type": "number",
+      "expected": 10040.0,
+      "tolerance": 1.0
+    },
+    {
+      "id": "12d",
+      "case": 12,
+      "check": "Does the wage tie-out pass?",
+      "type": "choice",
+      "expected": "no"
+    },
+    {
+      "id": "13a",
+      "case": 13,
+      "check": "Correct taxable amount of the IRA distribution.",
+      "type": "number",
+      "expected": 30000.0,
+      "tolerance": 1.0
+    },
+    {
+      "id": "13b",
+      "case": 13,
+      "check": "Correct itemized charitable deduction for the 10,000.",
+      "type": "number",
+      "expected": 0.0,
+      "tolerance": 1.0
+    },
+    {
+      "id": "14a",
+      "case": 14,
+      "check": "Correct qualified tips deduction.",
+      "type": "number",
+      "expected": 25000.0,
+      "tolerance": 1.0
+    },
+    {
+      "id": "14b",
+      "case": 14,
+      "check": "Amount by which the return overstates the deduction.",
+      "type": "number",
+      "expected": 6000.0,
+      "tolerance": 1.0
+    },
+    {
+      "id": "15a",
+      "case": 15,
+      "check": "Correct qualified overtime deduction.",
+      "type": "number",
+      "expected": 10000.0,
+      "tolerance": 1.0
+    },
+    {
+      "id": "15b",
+      "case": 15,
+      "check": "Amount by which the return overstates the deduction.",
+      "type": "number",
+      "expected": 20000.0,
+      "tolerance": 1.0
+    },
+    {
+      "id": "16a",
+      "case": 16,
+      "check": "Is Form 8962 required?",
+      "type": "choice",
+      "expected": "yes"
+    },
+    {
+      "id": "16b",
+      "case": 16,
+      "check": "Severity of this finding.",
+      "type": "choice",
+      "expected": "Error"
+    },
+    {
+      "id": "17a",
+      "case": 17,
+      "check": "Provisional income.",
+      "type": "number",
+      "expected": 44000.0,
+      "tolerance": 1.0
+    },
+    {
+      "id": "17b",
+      "case": 17,
+      "check": "Correct taxable Social Security benefits.",
+      "type": "number",
+      "expected": 13000.0,
+      "tolerance": 1.0
+    },
+    {
+      "id": "17c",
+      "case": 17,
+      "check": "Amount by which the return overstates taxable benefits.",
+      "type": "number",
+      "expected": 7400.0,
+      "tolerance": 1.0
+    },
+    {
+      "id": "18a",
+      "case": 18,
+      "check": "Correct taxable amount of the state refund.",
+      "type": "number",
+      "expected": 0.0,
+      "tolerance": 1.0
+    },
+    {
+      "id": "18b",
+      "case": 18,
+      "check": "Severity of this finding.",
+      "type": "choice",
+      "expected": "Error"
+    },
+    {
+      "id": "19a",
+      "case": 19,
+      "check": "Correct mortgage interest deduction.",
+      "type": "number",
+      "expected": 16480.0,
+      "tolerance": 1.0
+    },
+    {
+      "id": "19b",
+      "case": 19,
+      "check": "Amount by which the return understates the deduction.",
+      "type": "number",
+      "expected": 1800.0,
+      "tolerance": 1.0
+    },
+    {
+      "id": "20a",
+      "case": 20,
+      "check": "Correct total payments.",
+      "type": "number",
+      "expected": 26700.0,
+      "tolerance": 1.0
+    },
+    {
+      "id": "20b",
+      "case": 20,
+      "check": "Correct refund.",
+      "type": "number",
+      "expected": 2390.0,
+      "tolerance": 1.0
+    },
+    {
+      "id": "20c",
+      "case": 20,
+      "check": "Payment left off the return.",
+      "type": "number",
+      "expected": 900.0,
+      "tolerance": 1.0
+    },
+    {
+      "id": "21a",
+      "case": 21,
+      "check": "Correct SALT deduction.",
+      "type": "number",
+      "expected": 35900.0,
+      "tolerance": 1.0
+    },
+    {
+      "id": "21b",
+      "case": 21,
+      "check": "Net investment income tax that should be on the return.",
+      "type": "number",
+      "expected": 2280.0,
+      "tolerance": 0.5
+    },
+    {
+      "id": "21c",
+      "case": 21,
+      "check": "Required annual payment to avoid the underpayment penalty, based on the total tax as prepared.",
+      "type": "number",
+      "expected": 106200.0,
+      "tolerance": 1.0
+    },
+    {
+      "id": "21d",
+      "case": 21,
+      "check": "Is the underpayment safe harbor met?",
+      "type": "choice",
+      "expected": "no"
+    },
+    {
+      "id": "21e",
+      "case": 21,
+      "check": "Does the wage tie-out pass?",
+      "type": "choice",
+      "expected": "yes"
+    },
+    {
+      "id": "21f",
+      "case": 21,
+      "check": "Is the return ready to sign as prepared, with no changes?",
+      "type": "choice",
+      "expected": "no"
+    }
+  ]
+}

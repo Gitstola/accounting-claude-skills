@@ -1,0 +1,377 @@
+{
+  "skill": "state-nexus",
+  "checks": [
+    {
+      "id": "1a",
+      "case": 1,
+      "check": "Sales that count toward the threshold.",
+      "type": "number",
+      "expected": 95000.0,
+      "tolerance": 1.0
+    },
+    {
+      "id": "1b",
+      "case": 1,
+      "check": "Does the company have sales tax nexus in State X?",
+      "type": "choice",
+      "expected": "no"
+    },
+    {
+      "id": "2a",
+      "case": 2,
+      "check": "Sales that count toward the threshold.",
+      "type": "number",
+      "expected": 155000.0,
+      "tolerance": 1.0
+    },
+    {
+      "id": "2b",
+      "case": 2,
+      "check": "Does the company have sales tax nexus in State Y?",
+      "type": "choice",
+      "expected": "yes"
+    },
+    {
+      "id": "2c",
+      "case": 2,
+      "check": "Who collects the tax on the marketplace sales?",
+      "type": "choice",
+      "expected": "marketplace facilitator"
+    },
+    {
+      "id": "3a",
+      "case": 3,
+      "check": "Does the company have sales tax nexus in State Z?",
+      "type": "choice",
+      "expected": "yes"
+    },
+    {
+      "id": "4a",
+      "case": 4,
+      "check": "Does the company have sales tax nexus in State W?",
+      "type": "choice",
+      "expected": "no"
+    },
+    {
+      "id": "5a",
+      "case": 5,
+      "check": "Sales that count toward the threshold.",
+      "type": "number",
+      "expected": 70000.0,
+      "tolerance": 1.0
+    },
+    {
+      "id": "5b",
+      "case": 5,
+      "check": "Does the company have sales tax nexus in State V?",
+      "type": "choice",
+      "expected": "no"
+    },
+    {
+      "id": "6a",
+      "case": 6,
+      "check": "Month in which the threshold was crossed.",
+      "type": "choice",
+      "expected": "August"
+    },
+    {
+      "id": "6b",
+      "case": 6,
+      "check": "Month in which the duty to collect began (it begins on the first day of that month).",
+      "type": "choice",
+      "expected": "October"
+    },
+    {
+      "id": "6c",
+      "case": 6,
+      "check": "Uncollected tax exposure for this calendar year, before interest and penalties.",
+      "type": "number",
+      "expected": 2340.0,
+      "tolerance": 1.0
+    },
+    {
+      "id": "7a",
+      "case": 7,
+      "check": "Does the company meet State T's economic nexus threshold?",
+      "type": "choice",
+      "expected": "no"
+    },
+    {
+      "id": "7b",
+      "case": 7,
+      "check": "Does the company have sales tax nexus in State T?",
+      "type": "choice",
+      "expected": "yes"
+    },
+    {
+      "id": "8a",
+      "case": 8,
+      "check": "Can State S impose its net income tax on the company?",
+      "type": "choice",
+      "expected": "no"
+    },
+    {
+      "id": "8b",
+      "case": 8,
+      "check": "Does the company have sales tax nexus in State S?",
+      "type": "choice",
+      "expected": "yes"
+    },
+    {
+      "id": "9a",
+      "case": 9,
+      "check": "Can State S impose its net income tax on the company?",
+      "type": "choice",
+      "expected": "yes"
+    },
+    {
+      "id": "10a",
+      "case": 10,
+      "check": "Does P.L. 86-272 protect the company from State R's net income tax?",
+      "type": "choice",
+      "expected": "no"
+    },
+    {
+      "id": "10b",
+      "case": 10,
+      "check": "Does the company have income tax nexus in State R?",
+      "type": "choice",
+      "expected": "yes"
+    },
+    {
+      "id": "11a",
+      "case": 11,
+      "check": "State Q sales as a percentage of total sales.",
+      "type": "number",
+      "expected": 27.14,
+      "tolerance": 0.05
+    },
+    {
+      "id": "11b",
+      "case": 11,
+      "check": "Does the company have income tax nexus in State Q?",
+      "type": "choice",
+      "expected": "yes"
+    },
+    {
+      "id": "12a",
+      "case": 12,
+      "check": "Does the company have income tax nexus in State P under this standard?",
+      "type": "choice",
+      "expected": "no"
+    },
+    {
+      "id": "13a",
+      "case": 13,
+      "check": "Apportionment percentage.",
+      "type": "number",
+      "expected": 15.0,
+      "tolerance": 0.01
+    },
+    {
+      "id": "13b",
+      "case": 13,
+      "check": "Income apportioned to State N.",
+      "type": "number",
+      "expected": 300000.0,
+      "tolerance": 1.0
+    },
+    {
+      "id": "14a",
+      "case": 14,
+      "check": "Apportionment percentage.",
+      "type": "number",
+      "expected": 23.33,
+      "tolerance": 0.01
+    },
+    {
+      "id": "14b",
+      "case": 14,
+      "check": "Income apportioned to State M.",
+      "type": "number",
+      "expected": 210000.0,
+      "tolerance": 1.0
+    },
+    {
+      "id": "15a",
+      "case": 15,
+      "check": "Apportionment percentage.",
+      "type": "number",
+      "expected": 23.75,
+      "tolerance": 0.01
+    },
+    {
+      "id": "15b",
+      "case": 15,
+      "check": "Income apportioned to State L.",
+      "type": "number",
+      "expected": 213750.0,
+      "tolerance": 1.0
+    },
+    {
+      "id": "16a",
+      "case": 16,
+      "check": "Apportionment percentage.",
+      "type": "number",
+      "expected": 20.0,
+      "tolerance": 0.01
+    },
+    {
+      "id": "17a",
+      "case": 17,
+      "check": "State J property factor numerator.",
+      "type": "number",
+      "expected": 900000.0,
+      "tolerance": 1.0
+    },
+    {
+      "id": "17b",
+      "case": 17,
+      "check": "Property factor denominator.",
+      "type": "number",
+      "expected": 4600000.0,
+      "tolerance": 1.0
+    },
+    {
+      "id": "17c",
+      "case": 17,
+      "check": "Property factor percentage.",
+      "type": "number",
+      "expected": 19.57,
+      "tolerance": 0.01
+    },
+    {
+      "id": "18a",
+      "case": 18,
+      "check": "State A sales factor numerator.",
+      "type": "number",
+      "expected": 3000000.0,
+      "tolerance": 1.0
+    },
+    {
+      "id": "18b",
+      "case": 18,
+      "check": "State A apportionment percentage.",
+      "type": "number",
+      "expected": 37.5,
+      "tolerance": 0.01
+    },
+    {
+      "id": "18c",
+      "case": 18,
+      "check": "Income apportioned to State A.",
+      "type": "number",
+      "expected": 600000.0,
+      "tolerance": 1.0
+    },
+    {
+      "id": "19a",
+      "case": 19,
+      "check": "State A sales factor denominator.",
+      "type": "number",
+      "expected": 7000000.0,
+      "tolerance": 1.0
+    },
+    {
+      "id": "19b",
+      "case": 19,
+      "check": "State A apportionment percentage.",
+      "type": "number",
+      "expected": 28.57,
+      "tolerance": 0.01
+    },
+    {
+      "id": "19c",
+      "case": 19,
+      "check": "Income apportioned to State A.",
+      "type": "number",
+      "expected": 457142.86,
+      "tolerance": 2
+    },
+    {
+      "id": "20a",
+      "case": 20,
+      "check": "Amount of the fee in State G's sales factor numerator.",
+      "type": "number",
+      "expected": 500000.0,
+      "tolerance": 1.0
+    },
+    {
+      "id": "20b",
+      "case": 20,
+      "check": "Amount of the fee in State H's sales factor numerator.",
+      "type": "number",
+      "expected": 500000.0,
+      "tolerance": 1.0
+    },
+    {
+      "id": "20c",
+      "case": 20,
+      "check": "If State G instead used the same cost of performance rule as State H, the amount in State G's numerator.",
+      "type": "number",
+      "expected": 0.0,
+      "tolerance": 1.0
+    },
+    {
+      "id": "21a",
+      "case": 21,
+      "check": "Does the company have income tax nexus in State F?",
+      "type": "choice",
+      "expected": "yes"
+    },
+    {
+      "id": "21b",
+      "case": 21,
+      "check": "State F payroll factor numerator.",
+      "type": "number",
+      "expected": 85000.0,
+      "tolerance": 1.0
+    },
+    {
+      "id": "22a",
+      "case": 22,
+      "check": "Does the company have sales tax nexus in State D?",
+      "type": "choice",
+      "expected": "yes"
+    },
+    {
+      "id": "22b",
+      "case": 22,
+      "check": "Can State D impose its net income tax on the company?",
+      "type": "choice",
+      "expected": "no"
+    },
+    {
+      "id": "22c",
+      "case": 22,
+      "check": "State A apportionment percentage.",
+      "type": "number",
+      "expected": 36.67,
+      "tolerance": 0.01
+    },
+    {
+      "id": "22d",
+      "case": 22,
+      "check": "Income apportioned to State A.",
+      "type": "number",
+      "expected": 440000.0,
+      "tolerance": 2
+    },
+    {
+      "id": "22e",
+      "case": 22,
+      "check": "State B apportionment percentage.",
+      "type": "number",
+      "expected": 39.17,
+      "tolerance": 0.01
+    },
+    {
+      "id": "22f",
+      "case": 22,
+      "check": "Income apportioned to State B.",
+      "type": "number",
+      "expected": 470000.0,
+      "tolerance": 2
+    }
+  ]
+}
