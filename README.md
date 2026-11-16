@@ -2,7 +2,7 @@
 
 21 skills that teach Claude to do real accounting work, from ASC 842 lease schedules and tax provisions to audit sampling and QuickBooks cleanup. They come with **Skill Lab**, a loop that tests a skill blind and only accepts an edit after it proves itself.
 
-Built by Blaise Vastola, Master of Accounting (Penn State) and CPA candidate, working with Claude.
+Built by [Your Name], MAcc (Penn State) and CPA candidate, working with Claude.
 
 ## Results
 
