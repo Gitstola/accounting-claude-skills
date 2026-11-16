@@ -2,7 +2,7 @@
 
 21 skills that teach Claude to do real accounting work, from ASC 842 lease schedules and tax provisions to audit sampling and QuickBooks cleanup. They come with **Skill Lab**, a loop that tests a skill blind and only accepts an edit after it proves itself.
 
-Built by [Your Name], MAcc (Penn State) and CPA candidate, working with Claude.
+Built by Blaise Vastola, Master of Accounting (Penn State) and CPA candidate, working with Claude.
 
 ## Results
 
@@ -71,7 +71,7 @@ The rules: one edit per run. The test-taker never sees the answer key. Every mis
 | [bank-reconciliation](skills/bank-reconciliation/SKILL.md) | — | Bank-to-GL reconciliation and finding why cash doesn't tie |
 | [quickbooks-cleanup](skills/quickbooks-cleanup/SKILL.md) | — | QuickBooks Online file diagnosis and catch-up bookkeeping |
 
-Only `asc-842-lessee` is enrolled in Skill Lab so far. The others are next, each starting with at least 15 computed test cases.
+Only `asc-842-lessee` is enrolled in Skill Lab so far. Any other skill can be enrolled the same way, starting with at least 15 computed test cases.
 
 ## Use the skills
 
@@ -92,4 +92,4 @@ These skills prepare work for a reviewer. Judgment calls, such as the lease term
 
 ## Contact
 
-[Your Name] · [LinkedIn URL] · [email]
+Blaise Vastola · [LinkedIn](https://www.linkedin.com/in/blaise-vastola/)
