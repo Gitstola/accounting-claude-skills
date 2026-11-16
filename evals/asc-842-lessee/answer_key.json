@@ -1,0 +1,91 @@
+{
+  "skill": "asc-842-lessee",
+  "cases": 21,
+  "note": "64 pass/fail checks. Amounts pass within the stated tolerance; concept checks are graded by meaning. 'computed' points to the value derived in compute_key.py.",
+  "checks": [
+    {"case": 1, "check": "Classification", "expected": "Operating", "tolerance": null},
+    {"case": 1, "check": "Initial liability and ROU", "expected": 50548.37, "tolerance": 1, "computed": "1:initial_liability_and_rou"},
+    {"case": 1, "check": "Year 1 ROU amortization is the plug, not straight-line", "expected": 8967.10, "tolerance": 1, "computed": "1:y1_rou_amortization"},
+    {"case": 1, "check": "Year 1 lease expense", "expected": 12000.00, "tolerance": 1, "computed": "1:y1_lease_expense"},
+
+    {"case": 2, "check": "Liability after the commencement payment", "expected": 57743.17, "tolerance": 1, "computed": "2:liability_after_commencement_payment"},
+    {"case": 2, "check": "ROU asset", "expected": 75743.17, "tolerance": 1, "computed": "2:rou_asset"},
+    {"case": 2, "check": "Straight-line lease cost", "expected": 20418.14, "tolerance": 1, "computed": "2:straight_line_cost"},
+    {"case": 2, "check": "Year 1 ROU amortization", "expected": 17530.98, "tolerance": 1, "computed": "2:y1_rou_amortization"},
+
+    {"case": 3, "check": "Finance via the major-part test (77.8%)", "expected": "Finance", "tolerance": null},
+    {"case": 3, "check": "Initial liability", "expected": 269464.47, "tolerance": 1, "computed": "3:initial_liability"},
+    {"case": 3, "check": "Year 1 total expense (18,862.51 interest + 38,494.92 amortization)", "expected": 57357.44, "tolerance": 1, "computed": "3:y1_total_expense"},
+    {"case": 3, "check": "Cash flows", "expected": "Principal financing, interest operating", "tolerance": null},
+
+    {"case": 4, "check": "PV test includes the full $20,000 RVG (vs 108,000 threshold)", "expected": 119795.04, "tolerance": 1, "computed": "4:pv_test_numerator_full_rvg"},
+    {"case": 4, "check": "Classification", "expected": "Finance", "tolerance": null},
+    {"case": 4, "check": "Liability includes only the $2,000 probable", "expected": 105537.36, "tolerance": 1, "computed": "4:initial_liability"},
+
+    {"case": 5, "check": "Finance via the purchase option", "expected": "Finance", "tolerance": null},
+    {"case": 5, "check": "Liability includes the option price", "expected": 106623.58, "tolerance": 1, "computed": "5:initial_liability"},
+    {"case": 5, "check": "Amortized over the 8-year useful life (Year 1)", "expected": 13327.95, "tolerance": 1, "computed": "5:y1_amortization_8yr"},
+
+    {"case": 6, "check": "Short-term exemption unavailable (term is 24 months)", "expected": "No", "tolerance": null},
+    {"case": 6, "check": "Recognizes an ROU asset and lease liability", "expected": "Yes", "tolerance": null},
+
+    {"case": 7, "check": "Liability at the commencement CPI", "expected": 173179.07, "tolerance": 1, "computed": "7:initial_liability"},
+    {"case": 7, "check": "Extra $1,200 is variable lease expense", "expected": "Yes", "tolerance": null},
+    {"case": 7, "check": "CPI change alone does not trigger remeasurement", "expected": "No remeasurement", "tolerance": null},
+
+    {"case": 8, "check": "Liability excludes the percentage rent", "expected": 160380.72, "tolerance": 1, "computed": "8:initial_liability"},
+    {"case": 8, "check": "Percentage rent expensed when incurred or probable", "expected": "Yes", "tolerance": null},
+
+    {"case": 9, "check": "Major-part test not applied (last 25% of life)", "expected": "Not applied", "tolerance": null},
+    {"case": 9, "check": "Classification", "expected": "Operating", "tolerance": null},
+
+    {"case": 10, "check": "Current portion is principal reduction (noncurrent 41,581.27)", "expected": 8967.10, "tolerance": 1, "computed": "10:current_portion"},
+
+    {"case": 11, "check": "Liability reduced by the PV of the incentive payable", "expected": 137075.81, "tolerance": 50, "computed": "11:initial_liability"},
+    {"case": 11, "check": "ROU equals the liability", "expected": 137075.81, "tolerance": 50, "computed": "11:rou_asset"},
+
+    {"case": 12, "check": "Lease term", "expected": "3 years", "tolerance": null},
+    {"case": 12, "check": "Liability includes the PV of the penalty", "expected": 61375.66, "tolerance": 1, "computed": "12:initial_liability"},
+
+    {"case": 13, "check": "Liability includes the fixed CAM", "expected": 152501.89, "tolerance": 1, "computed": "13:initial_liability"},
+    {"case": 13, "check": "Utilities excluded and expensed as incurred", "expected": "Yes", "tolerance": null},
+
+    {"case": 14, "check": "Keeps the original 6% rate", "expected": "6%, not 8%", "tolerance": null},
+    {"case": 14, "check": "Adjustment to liability and ROU (56,781.77 to 60,341.76)", "expected": 3559.99, "tolerance": 1, "computed": "14:adjustment"},
+
+    {"case": 15, "check": "Not a separate contract; updated 7% rate", "expected": "7%", "tolerance": null},
+    {"case": 15, "check": "Remeasured liability", "expected": 49202.37, "tolerance": 1, "computed": "15:remeasured_liability"},
+    {"case": 15, "check": "ROU adjustment (from 32,076.14)", "expected": 17126.23, "tolerance": 1, "computed": "15:rou_adjustment"},
+
+    {"case": 16, "check": "Impairment loss (ROU before 32,076.14)", "expected": 12076.14, "tolerance": 1, "computed": "16:impairment_loss"},
+    {"case": 16, "check": "Year 3 ROU amortization switches to straight-line", "expected": 6666.67, "tolerance": 1, "computed": "16:y3_rou_amortization"},
+    {"case": 16, "check": "Year 3 total expense (1,924.57 accretion + amortization)", "expected": 8591.24, "tolerance": 1, "computed": "16:y3_total_expense"},
+
+    {"case": 17, "check": "Keeps the original 6% rate", "expected": "6%, not 8%", "tolerance": null},
+    {"case": 17, "check": "Adjustment to liability and ROU", "expected": 26730.12, "tolerance": 1, "computed": "17:adjustment"},
+
+    {"case": 18, "check": "Initial liability", "expected": 78370.47, "tolerance": 1, "computed": "18:initial_liability"},
+    {"case": 18, "check": "Monthly straight-line cost", "expected": 3500.00, "tolerance": 1, "computed": "18:monthly_sl_cost"},
+    {"case": 18, "check": "Month 1 ROU amortization", "expected": 3108.15, "tolerance": 1, "computed": "18:m1_rou_amortization"},
+    {"case": 18, "check": "Liability at the end of Month 1 (accretes, no payment)", "expected": 78762.32, "tolerance": 1, "computed": "18:m1_end_liability"},
+
+    {"case": 19, "check": "Term includes the lessor-controlled extension", "expected": "5 years", "tolerance": null},
+    {"case": 19, "check": "Initial liability", "expected": 43294.77, "tolerance": 1, "computed": "19:initial_liability"},
+
+    {"case": 20, "check": "Third-party RVG excluded from the PV test (84.25%)", "expected": "Operating", "tolerance": null},
+    {"case": 20, "check": "Initial liability", "expected": 84247.28, "tolerance": 1, "computed": "20:initial_liability"},
+
+    {"case": 21, "check": "Initial liability", "expected": 51976.58, "tolerance": 1, "computed": "21:initial_liability"},
+    {"case": 21, "check": "ROU asset", "expected": 50976.58, "tolerance": 1, "computed": "21:rou_asset"},
+    {"case": 21, "check": "Straight-line lease cost", "expected": 14750.00, "tolerance": 1, "computed": "21:straight_line_cost"},
+    {"case": 21, "check": "Year 1 ROU amortization", "expected": 11631.40, "tolerance": 1, "computed": "21:y1_rou_amortization"},
+    {"case": 21, "check": "Current portion at commencement", "expected": 11881.40, "tolerance": 1, "computed": "21:current_portion_at_commencement"},
+    {"case": 21, "check": "Classification memo shows all five tests with numbers", "expected": "Present", "tolerance": null},
+    {"case": 21, "check": "Schedule has all 10 columns from the Output section", "expected": "Present", "tolerance": null},
+    {"case": 21, "check": "Journal entries for commencement and Year 1", "expected": "Present", "tolerance": null},
+    {"case": 21, "check": "Maturity table reconciles via imputed interest of 8,023.42", "expected": "Present", "tolerance": 1, "computed_aux": "21:imputed_interest"},
+    {"case": 21, "check": "Judgment items flagged for reviewer sign-off", "expected": "Present", "tolerance": null},
+    {"case": 21, "check": "All five tie-outs reported PASS, FAIL or N/A", "expected": "Present", "tolerance": null},
+    {"case": 21, "check": "Assumptions stated", "expected": "Present", "tolerance": null}
+  ]
+}
