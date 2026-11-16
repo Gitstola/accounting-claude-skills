@@ -1,6 +1,6 @@
 # Accounting skills for Claude
 
-21 skills that teach Claude to do real accounting work, from ASC 842 lease schedules and tax provisions to audit sampling and QuickBooks cleanup. They come with **Skill Lab**, a loop that tests a skill blind and only accepts an edit after it proves itself.
+25 skills that teach Claude to do real accounting and tax work, from ASC 842 lease schedules and tax provisions to S corporation basis, state nexus and QuickBooks cleanup. They come with **Skill Lab**, a loop that tests a skill blind and only accepts an edit after it proves itself.
 
 Built by Blaise Vastola, Master of Accounting (Penn State) and CPA candidate, working with Claude.
 
@@ -18,6 +18,19 @@ The flagship skill, `asc-842-lessee`, is graded against 21 test cases and 64 pas
 The baseline miss was a real one. The skill didn't say that a lessor-controlled extension always belongs in the lease term (Case 19). Leaving it out turns a 5-year term into 3 and understates the liability by 37% (27,232.48 instead of 43,294.77). Skill Lab wrote a one-line fix, re-tested it blind, and confirmed it fixed both checks without breaking any that passed before.
 
 Testing on the smallest model is on purpose. A strong model fills a skill's gaps from its own knowledge and hides them; Haiku shows what the skill itself teaches.
+
+### Tax skill pack
+
+Four tax skills were built and tested the same way: blind on Haiku, with every expected answer computed in code. Two independent reviewers then recomputed all 82 cases and checked each rule against the Code, regulations and IRS instructions.
+
+| Skill | Cases | Checks | First blind run | After fixes |
+|---|---|---|---|---|
+| `s-corp-basis` | 19 | 72 | 72 / 72 | **72 / 72** |
+| `partnership-basis` | 20 | 63 | 60 / 63 | **63 / 63** |
+| `form-1040-review` | 21 | 56 | 56 / 56 | **56 / 56** |
+| `state-nexus` | 22 | 49 | 49 / 49 | **49 / 49** |
+
+The partnership miss was real: the rule for debt on contributed property let the test-taker count the partner's share twice, overstating basis by 15,000 in one case. The review also caught a wrong entry in one answer key, which a passing score had hidden. Details are in [`RESULTS.md`](RESULTS.md) and [`review/`](review).
 
 ## See it work
 
@@ -50,6 +63,10 @@ The rules: one edit per run. The test-taker never sees the answer key. Every mis
 | Skill | Standard | What it does |
 |---|---|---|
 | [asc-842-lessee](skills/asc-842-lessee/SKILL.md) | ASC 842 | Lease classification, PV, ROU asset, schedules, entries, modifications. **Tested in Skill Lab.** |
+| [s-corp-basis](skills/s-corp-basis/SKILL.md) | IRC 1366-1368 | Shareholder stock and debt basis, loss limits, distributions, loan repayments. **Tested.** |
+| [partnership-basis](skills/partnership-basis/SKILL.md) | IRC 704(d), 731-733, 752 | Partner outside basis, liability shifts, loss limits, distributions. **Tested.** |
+| [form-1040-review](skills/form-1040-review/SKILL.md) | Form 1040 | Review of a prepared individual return: completeness, deductions, penalties, tie-outs. **Tested.** |
+| [state-nexus](skills/state-nexus/SKILL.md) | P.L. 86-272, state law | Sales and income tax nexus, apportionment, throwback and throwout. **Tested.** |
 | [asc-606-revenue](skills/asc-606-revenue/SKILL.md) | ASC 606 | Contracts, performance obligations, variable consideration, SSP allocation |
 | [asc-740-tax-provision](skills/asc-740-tax-provision/SKILL.md) | ASC 740 | Current and deferred tax, valuation allowance, uncertain positions, ETR rec |
 | [stock-compensation](skills/stock-compensation/SKILL.md) | ASC 718 | Options, RSUs, vesting, forfeitures, modifications, tax effects |
@@ -71,7 +88,7 @@ The rules: one edit per run. The test-taker never sees the answer key. Every mis
 | [bank-reconciliation](skills/bank-reconciliation/SKILL.md) | — | Bank-to-GL reconciliation and finding why cash doesn't tie |
 | [quickbooks-cleanup](skills/quickbooks-cleanup/SKILL.md) | — | QuickBooks Online file diagnosis and catch-up bookkeeping |
 
-Only `asc-842-lessee` is enrolled in Skill Lab so far. Any other skill can be enrolled the same way, starting with at least 15 computed test cases.
+Five skills have computed test suites under [`evals/`](evals): `asc-842-lessee` and the four tax skills. `asc-842-lessee` also runs in the weekly Skill Lab loop. Any other skill can be tested the same way, starting with at least 15 computed cases.
 
 ## Use the skills
 
@@ -88,7 +105,7 @@ python examples/asc-842-lessee/build_workpaper.py     # rebuild the Excel workpa
 
 ## Scope
 
-These skills prepare work for a reviewer. Judgment calls, such as the lease term, the discount rate and "reasonably certain" assessments, are flagged for sign-off and never decided silently. The facts in the examples are illustrative. This isn't accounting advice, and the project isn't affiliated with Anthropic.
+These skills prepare work for a reviewer. Yearly federal figures and state thresholds change, so the tax skills tell Claude to look them up, and their test cases state the figures they use. Judgment calls, such as the lease term, the discount rate and "reasonably certain" assessments, are flagged for sign-off and never decided silently. The facts in the examples are illustrative. This isn't accounting advice, and the project isn't affiliated with Anthropic.
 
 ## Contact
 
